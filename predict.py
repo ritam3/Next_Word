@@ -4,6 +4,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 def predict_next_word(model, tokenizer, next_words, text, max_sequence_len):
+    print(f"Text input is : {text}")
+    print(f"No of words : {next_words}")
     for _ in range(next_words):
         #convert to token
         token_list = tokenizer.texts_to_sequences([text])[0]
@@ -18,4 +20,5 @@ def predict_next_word(model, tokenizer, next_words, text, max_sequence_len):
                 output_word = word
                 break
         text += " " + output_word
+    print(f"Final output : {text}")
     return text

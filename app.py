@@ -11,7 +11,7 @@ with open('tokenizer.pickle','rb') as handle:
     tokenizer=pickle.load(handle)
 
 # streamlit app
-st.title("Next Word Prediction With LSTM And Early Stopping")
+st.title("Next Word Prediction With LSTM")
 
 input_text=st.text_input("Enter the sequence of Words","Sherlock was")
 
